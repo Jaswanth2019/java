@@ -36,3 +36,75 @@ Two ways to connect java application with database
 2) by using JDBC driver only (TYPE-2 | TYPE-4)
 
 ### STEPS TO DEVELOP DATABASE APPLICATION
+
+1) Load a speccific JDBC driver
+2) Establish connection between database and java application
+3) perform the task
+4) close the connection
+### TYPE-4 DRIVER is the most commonly used JDBC driver.
+
+STEP 1
+- To load JDBC driver we use **forName** method
+- the method present in Class classname and return type is class
+
+TYPE-4 DRIVER
+
+  Class c=Class.forName("oracle.jdbc.driver.OracleDriver")
+
+STEP 2
+- To establish connection between database and application we use *getConnection* method
+- the method present in DriverManager class and return type is Connection
+
+CONNECTION
+
+  Connection con=DriverManager.getConnection(URL,"USERNAME","PASSWORD");
+  URL OF TYPE-4 DRIVER- "jdbc:oracle:thin:@localhost:1521:XE"
+STEP 3
+  we can execute static,dynamic queries and PL/SQL programs
+
+### JDBC api
+- It is a java api that can access any kind of tabular data.
+- In JDBC API, the packages used are:
+  1) java.sql package
+  2) javax.sql package
+  3) javax.sql.rowset package
+
+### java.sql package 
+- The java.sql package contains classes and interfaces required to interact with databases using JDBC.
+  1) classes
+     - DriverManager
+     - SQLException
+     - Date
+     - Time
+     - Types
+  2) interfaces
+     - Driver
+     - Connection
+     - Statement
+     - PreparedStatement
+     - CallableStatement
+     - ResultSet
+     - ResultSetMetaData
+     - DatabaseMetaDate
+     - Blob
+     - Clob
+
+### java.sql.connection
+the method we use from connection interfaces are
+1) public abstract Statement createStatement() Used for static SQL queries
+2) public abstract PreparedStatement prepareStatement(String) Used for dynamic (parameterized) SQL queries
+3) public abstract CallableStatement prepareCall(String) Used to execute stored procedures (PL/SQL programs)
+
+### java.sql.Statement 
+The Statement interface is used to execute static SQL queries.
+
+COMMONLY USED METHODS
+1) public abstract boolean execute(String) suitable for DDL queries
+2) public abstract int executeUpdate(String) suitable for DML queries
+3) public abstract ResultSet executeQuery(String) suitable for DQL queries
+
+
+    
+
+
+
