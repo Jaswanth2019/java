@@ -103,6 +103,32 @@ COMMONLY USED METHODS
 2) public abstract int executeUpdate(String) suitable for DML queries
 3) public abstract ResultSet executeQuery(String) suitable for DQL queries
 
+## PROGRAMS 
+
+1) PROGRAM FOR ESTABLISHING CONNECTION BETWEEN JAVA APPLICATION AND DATABASE BY USING JDBC TYPE-4 DRIVER --> *DemoConnection.java*
+2) PROGRAMS FOR ALL STATIC QUERIES
+   - JDBC PROGRAM FOR ALL DDL COOMANDS  --> **CreateTable.java**
+     - In this program we used CREATE command, the process is same and we can use all the DDL commands in the program
+   - JDBC PROGRAM FOR ALL DML COOMANDS  --> **InsertCommand.java**
+     - In this program we used INSERT command, the process is same and we can use all the DML commands in the program
+   - JDBC PROGRAM FOR DQL COOMANDS  --> **SelectCommand.java**
+     - In this program we used SELECT command
+3) PROGRAMS FOR ALL DYNAMIC QUERies
+   - JDBC PROGRAM FOR ALL DML COOMANDS  --> **DynamicInsert.java**
+     - In this program we used INSERT command, the process is same and we can use all the DML commands in the program
+   - JDBC PROGRAM FOR DQL COOMAND --> **DynamicSelect.java**
+4) PROGRAMS FOR PL/SQL PROGRAM
+   - JDBC PROGRAM TO DEMONSTRATE CALLABLESTATEMENT WITH INPUT PARAMATERS IN A STORED PROCEDURE --> **PlSqlProcedure.java**
+     - In the program we stored a procedure in database and used it in the java program, what we have done in the program is we are inserting the data dynamically using preparedstatement interface
+   - JDBC PROGRAM TO DEMONSTRATE CALLABLESTATEMENT WITH OUTPUT PARAMATERS IN A STORED PROCEDURE --> **PlSqlGetProcedure.java**
+     - In the program we stored a procedure in database and used it in the java program, what we have done in the program is we inserted data dynamically and got an output as per the input
+   - JDBC PROGRAM TO DEMONSTRATE CALLABLESTATEMENT WITH FUNCTION -->  **PlSqlFunction.java**
+     - In the program we stored a function in database and used it in the java program
+
+
+### RESULTSET
+
+
 
     
 
