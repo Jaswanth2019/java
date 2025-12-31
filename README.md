@@ -98,10 +98,44 @@ the method we use from connection interfaces are
 ### java.sql.Statement 
 The Statement interface is used to execute static SQL queries.
 
-COMMONLY USED METHODS
+METHODS
 1) public abstract boolean execute(String) suitable for DDL queries
 2) public abstract int executeUpdate(String) suitable for DML queries
 3) public abstract ResultSet executeQuery(String) suitable for DQL queries
+
+
+### RESULTSET
+
+- ResultSet is an object that encapsulates set of rows from database
+
+- ResultSet is generated based on the Sql query (SELECT)
+
+### java.sql.ResultSet
+METHODS
+- public abstract boolean next() throws SQLException -> returns true and moves the cursor to next record if present
+- public abstract String getString(int) throws SQLException
+- public abstract int getInt(int) throws SQLException
+
+the above two methods are for getting the data from the ResultSet
+- public abstract ResultSetMetaData getMetaData() throws SQLException -> returns the ResultSetMetaData
+
+METADATA - data about data
+
+ResultSetMetaData - data about ResultSet (column names)
+
+### java.sql.ResultSetMetaData
+Methods
+- public abstract int getCoulmnCount() throws SQLException -> return number of columns
+- public abstract String getColumnName(int) throws SQLException -> return column name based on the specified column index
+
+### java.sql.PreparedStatement 
+The PreparedStatement interface is used to execute dynamic SQL queries.
+
+METHODS
+- public abstract void setInt(int,int) throws SQLException -> the first argument refers to the index and second refers to the integer value that to be set or filled in the data
+- public abstract void setString(int,String) throws SQLException -> same as above instead of integer value it takes string value to fill in the data
+- public abstract int excuteUpdate() throws SQLException -> to execute the DML query
+- public abstract ResultSet excutequery() throws SQLException -> to execute DQL query
 
 ## PROGRAMS 
 
@@ -124,9 +158,6 @@ COMMONLY USED METHODS
      - In the program we stored a procedure in database and used it in the java program, what we have done in the program is we inserted data dynamically and got an output as per the input
    - JDBC PROGRAM TO DEMONSTRATE CALLABLESTATEMENT WITH FUNCTION -->  **PlSqlFunction.java**
      - In the program we stored a function in database and used it in the java program
-
-
-### RESULTSET
 
 
 
